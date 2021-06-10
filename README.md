@@ -5,6 +5,8 @@
 This application is a simple Java Console Application that aims to implement design pattern examples to a Programmin Language Class. A set of design patterns will be developed
 each week, and they'll be divided in different [branches](https://github.com/LBeghini/Java-Design-Patterns/branches).  
 
+The main branch is a template for every other branch.  
+
 ## Implemented design patterns
 ### Behavioural patterns
 - [ ] Chain of responsability
