@@ -49,6 +49,18 @@ After that, you'll need to clone this repo:
 git clone https://github.com/LBeghini/Java-Design-Patterns.git
 ```
 
+## Change branch
+To change to a different branch, run the command:
+```bash
+git checkout name-of-the-branch
+```
+The branch names have the pattern:
+
+```
+{number-of-the-week}-{pattern1}-{pattern2}...
+```
+> The quantity of patterns depends of what was requested at the taks of the corresponding week 
+
 ## Testing
 This project has no aim to run any of the implemented classes, as the goal is the code itself. However, the classes will be tested to visualize the behaviour and implementation 
 of the patterns.  
