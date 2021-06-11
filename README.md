@@ -23,7 +23,7 @@ The main branch is a template for every other branch.
 - [ ] Builder
 - [ ] Factory method
 - [ ] Prototype
-- [ ] Singleton
+- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton-builder)
 
 ### Structural patterns
 - [ ] Adapter
