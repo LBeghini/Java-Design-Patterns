@@ -20,10 +20,10 @@ The main branch is a template for every other branch.
 
 ### Creational patterns
 - [ ] Abstract factory
-- [ ] Builder
+- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/tree/1-builder)
 - [ ] Factory method
 - [ ] Prototype
-- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton-builder)
+- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton)
 
 ### Structural patterns
 - [ ] Adapter
