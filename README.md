@@ -57,9 +57,9 @@ git checkout name-of-the-branch
 The branch names have the pattern:
 
 ```
-{number-of-the-week}-{pattern1}-{pattern2}...
+{number-of-the-week}-{pattern1}...
 ```
-> The quantity of patterns depends of what was requested at the taks of the corresponding week 
+> `number-of-the-week` corresponds to the week asked to be implemented certain pattern 
 
 ## Testing
 This project has no aim to run any of the implemented classes, as the goal is the code itself. However, the classes will be tested to visualize the behaviour and implementation 
