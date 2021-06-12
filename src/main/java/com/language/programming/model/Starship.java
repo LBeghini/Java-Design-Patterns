@@ -1,8 +1,8 @@
 package com.language.programming.model;
 
-public class Spaceship {
+public class Starship {
 
-    private Spaceship() {
+    private Starship() {
     };
 
     private String name;
@@ -12,9 +12,9 @@ public class Spaceship {
     private Integer crewNumber;
     private Float fuel;
 
-    private static Spaceship instance = new Spaceship();
+    private static Starship instance = new Starship();
 
-    public static Spaceship getInstance() {
+    public static Starship getInstance() {
         return instance;
     }
 
