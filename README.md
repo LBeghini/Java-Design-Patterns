@@ -57,7 +57,7 @@ git checkout name-of-the-branch
 The branch names have the pattern:
 
 ```
-{number-of-the-week}-{pattern1}...
+{number-of-the-week}-{pattern-name}
 ```
 > `number-of-the-week` corresponds to the week asked to be implemented certain pattern 
 
