@@ -34,7 +34,7 @@ public class CrewMemberTest {
   public void shouldFailCrewMemberWithoutId() {
     assertThrows(InvalidId.class, () -> {
       CrewMemberBuilder crewMemberBuilder = new CrewMemberBuilder();
-      CrewMember crewMember = crewMemberBuilder.setName("Spok").setspecie(Specie.HUMAN).setRank(Rank.CAPTAIN)
+      CrewMember crewMember = crewMemberBuilder.setName("Spock").setspecie(Specie.HUMAN).setRank(Rank.CAPTAIN)
           .setSerialNumber("SC937-0176CEC").setStatus(Status.DECEASED).setBirthDate(LocalDate.of(2233, 3, 22))
           .setBloodType(BloodType.AB).build();
     });
