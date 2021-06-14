@@ -5,7 +5,9 @@
 This application is a simple Java Console Application that aims to implement design pattern examples to a Programmin Language Class. A set of design patterns will be developed
 each week, and they are divided in different [branches](https://github.com/LBeghini/Java-Design-Patterns/branches).  
 
-The main branch is a template for every other branch.  
+The main branch is just a template for every other branch.
+
+Also, to make it easier to download the source code, [releases](https://github.com/LBeghini/Java-Design-Patterns/releases) are created related to the task of the week, giving a snapshot of the code for that specific implementation.
 
 ## Implemented design patterns
 ### Behavioural patterns
@@ -20,10 +22,10 @@ The main branch is a template for every other branch.
 
 ### Creational patterns
 - [ ] Abstract factory
-- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/tree/1-builder)
+- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/releases/tag/1.builder)
 - [ ] Factory method
 - [ ] Prototype
-- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton)
+- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/releases/tag/1.singleton)
 
 ### Structural patterns
 - [ ] Adapter
