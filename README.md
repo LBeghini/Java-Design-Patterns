@@ -28,7 +28,7 @@ public CrewMember(Integer id, String name, Specie specie, Rank rank, String seri
 and the creation would be:
 ```java
 
-CrewMember crewMember = new CrewMember(1, "Spock", Specie.HUMAN, Rank.CAPTAIN, "SC937-0176CEC", Status.DECEASED, LocalDate.of(2233, 3, 22), BloodType.T);
+CrewMember crewMember = new CrewMember(1, "Kirk", Specie.HUMAN, Rank.CAPTAIN, "SC937-0176CEC", Status.DECEASED, LocalDate.of(2233, 3, 22), BloodType.AB);
 
 ```
 
@@ -40,9 +40,9 @@ Creating a complex object gets easier by dividing the process in parts
 
 ```java
 
-CrewMember crewMember = crewMemberBuilder.setName("Spok").setspecie(Specie.HUMAN).setRank(Rank.CAPTAIN)
-                                         .setSerialNumber("SC937-0176CEC").setStatus(Status.DECEASED)
-                                         .setBirthDate(LocalDate.of(2233, 3, 22)).setBloodType(BloodType.AB).build();
+CrewMember crewMember = crewMemberBuilder.setName("Spok").setspecie(Specie.VULCANO).setRank(Rank.COMMANDER)
+                                         .setSerialNumber("S 179-276 SP").setStatus(Status.MISSING)
+                                         .setBirthDate(LocalDate.of(2285, 1, 6)).setBloodType(BloodType.T).build();
 
 ```
 
