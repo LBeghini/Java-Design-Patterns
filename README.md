@@ -35,12 +35,12 @@ public class Trooper implements Cloneable {
 Then, you can build your army by cloning like:
 
 ```java
-    Trooper template = new Trooper("Jango Fett", Specie.HUMAN, Gender.MALE, 1.83f, Color.BLACK, Color.BROWN);
-    Trooper clone = template.clone();
+Trooper template = new Trooper("Jango Fett", Specie.HUMAN, Gender.MALE, 1.83f, Color.BLACK, Color.BROWN);
+Trooper clone = template.clone();
 ```
 
 And you also can modify as you want:
 
 ```java
-    clone.setName("Bobba Fett");
+clone.setName("Bobba Fett");
 ```
