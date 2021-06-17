@@ -1,76 +1,46 @@
 # ☕ Java Design Patterns
 
-## About
+## Prototype
 
-This application is a simple Java Console Application that aims to implement design pattern examples to a Programmin Language Class. A set of design patterns will be developed
-each week, and they are divided in different [branches](https://github.com/LBeghini/Java-Design-Patterns/branches).  
+This pattern aims to create copies of an instance, and that instance would serve as a template for those copies.
 
-The main branch is just a template for every other branch.
+For example, let's suppose you have an Empire, and want to create an army with soldiers that you can easily control. Also, you have Obsessive Compulsive Disorder and want them all to look the same.
 
-Also, to make it easier to download the source code, [releases](https://github.com/LBeghini/Java-Design-Patterns/releases) are created related to the task of the week, giving a snapshot of the code for that specific implementation.
+For that so, you can use clones.
 
-## Implemented design patterns
-### Behavioural patterns
-- [ ] Chain of responsability
-- [ ] Command
-- [ ] Iterator
-- [ ] Memento
-- [ ] Observer
-- [ ] State
-- [ ] Strategy
-- [ ] Template method
+In Java is easy to implement this because there is an interface called `Cloneable`. Then, you need to override the method `clone`:
 
-### Creational patterns
-- [ ] Abstract factory
-- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/releases/tag/1.builder)
-- [ ] Factory method
-- [ ] Prototype
-- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/releases/tag/1.singleton)
+```java
+public class Trooper implements Cloneable {
+    private String name;
+    private Specie specie;
+    private Gender gender;
+    private Float height;
+    private Color hairColor;
+    private Color eyeColor;
 
-### Structural patterns
-- [ ] Adapter
-- [ ] Bridge
-- [ ] Composite
-- [ ] Decorator
-- [ ] Facade
-- [ ] Flyweight
-- [ ] Mediator
-- [ ] Proxy
+    // Constructor, getters and setters were hidden for simplification
 
-## Technologies
-- Java
-- JUnit
-- Maven
-
-## Requirements 
-To run and edit the project, be sure to have installed in your computer the following softwares:
-- A code editor
-
-After that, you'll need to clone this repo:
-```
-git clone https://github.com/LBeghini/Java-Design-Patterns.git
+    @Override
+    public Trooper clone() {
+        try {
+            return (Trooper) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new InternalError();
+        }
+    }
+}
 ```
 
-## Change branch
-To change to a different branch, run the command:
-```bash
-git checkout name-of-the-branch
-```
-The branch names have the pattern:
+Then, you can build your army by cloning like:
 
-```
-{number-of-the-week}-{pattern-name}
-```
-> `number-of-the-week` corresponds to the week asked to be implemented certain pattern 
-
-## Testing
-This project has no aim to run any of the implemented classes, as the goal is the code itself. However, the classes will be tested to visualize the behaviour and implementation 
-of the patterns.  
-
-You can run the tests using the maven wrapper:
-```bash
-./mvnw test 
+```java
+    Trooper template = new Trooper("Jango Fett", Specie.HUMAN, Gender.MALE, 1.83f, Color.BLACK, Color.BROWN);
+    Trooper clone = template.clone();
 ```
 
-## :balance_scale: License
-[MIT License](https://github.com/LBeghini/Java-Design-Patterns/blob/main/LICENSE)
+And you also can modify as you want:
+
+```java
+    clone.setName("Bobba Fett");
+```
