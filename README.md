@@ -26,7 +26,7 @@ Also, to make it easier to download the source code, [releases](https://github.c
 
 - [ ] Abstract factory
 - [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/tree/1-builder)
-- [ ] Factory method
+- [x] [Factory method](https://github.com/LBeghini/Java-Design-Patterns/tree/2-factory-method)
 - [x] [Prototype](https://github.com/LBeghini/Java-Design-Patterns/tree/2-prototype)
 - [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton)
 
