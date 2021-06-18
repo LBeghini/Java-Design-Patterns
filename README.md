@@ -1,76 +1,73 @@
 # ☕ Java Design Patterns
 
-## About
+## Factory Method
 
-This application is a simple Java Console Application that aims to implement design pattern examples to a Programmin Language Class. A set of design patterns will be developed
-each week, and they are divided in different [branches](https://github.com/LBeghini/Java-Design-Patterns/branches).  
+Factory Method is a pattern that defines an interface for creating an object, and let its subclasses decide which class to instantiate.
 
-The main branch is just a template for every other branch.
+For example, you are in a game creating your character, and there is four different races:
 
-Also, to make it easier to download the source code, [releases](https://github.com/LBeghini/Java-Design-Patterns/releases) are created related to the task of the week, giving a snapshot of the code for that specific implementation.
-
-## Implemented design patterns
-### Behavioural patterns
-- [ ] Chain of responsability
-- [ ] Command
-- [ ] Iterator
-- [ ] Memento
-- [ ] Observer
-- [ ] State
-- [ ] Strategy
-- [ ] Template method
-
-### Creational patterns
-- [ ] Abstract factory
-- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/releases/tag/1.builder)
-- [ ] Factory method
-- [ ] Prototype
-- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/releases/tag/1.singleton)
-
-### Structural patterns
-- [ ] Adapter
-- [ ] Bridge
-- [ ] Composite
-- [ ] Decorator
-- [ ] Facade
-- [ ] Flyweight
-- [ ] Mediator
-- [ ] Proxy
-
-## Technologies
-- Java
-- JUnit
-- Maven
-
-## Requirements 
-To run and edit the project, be sure to have installed in your computer the following softwares:
-- A code editor
-
-After that, you'll need to clone this repo:
-```
-git clone https://github.com/LBeghini/Java-Design-Patterns.git
+- Human
+- Orc
+- Dwarf
+- Elf
+  
+```java
+Character character = new Character("Aragorn", Race.HUMAN);
 ```
 
-## Change branch
-To change to a different branch, run the command:
-```bash
-git checkout name-of-the-branch
-```
-The branch names have the pattern:
+Each one of these has different sizes and peculiarities, and their weapons must be built specifically for each race. You will need a special blacksmith to create your weapon.
 
-```
-{number-of-the-week}-{pattern-name}
-```
-> `number-of-the-week` corresponds to the week asked to be implemented certain pattern 
+First, we'll need a Interface Blacksmith:
 
-## Testing
-This project has no aim to run any of the implemented classes, as the goal is the code itself. However, the classes will be tested to visualize the behaviour and implementation 
-of the patterns.  
-
-You can run the tests using the maven wrapper:
-```bash
-./mvnw test 
+```java
+public interface Blacksmith {
+    Weapon forge(WeaponType weaponType);
+}
 ```
 
-## :balance_scale: License
-[MIT License](https://github.com/LBeghini/Java-Design-Patterns/blob/main/LICENSE)
+Then, for each race we have, we'll create a specific Blackmith by implementing the interface:
+
+```java
+class DwarfBlacksmith implements Blacksmith {
+
+    public Weapon forge(WeaponType weaponType) {
+        return new Weapon(weaponType, 100f, 20f, 15f, 10f);
+    }
+
+}
+
+class ElfBlacksmith implements Blacksmith {
+
+    public Weapon forge(WeaponType weaponType) {
+        return new Weapon(weaponType, 100f, 30f, 10f, 6f);
+    }
+
+}
+
+class HumanBlacksmith implements Blacksmith {
+
+    public Weapon forge(WeaponType weaponType) {
+        return new Weapon(weaponType, 100f, 20f, 10f, 10f);
+    }
+
+}
+
+class OrcBlacksmith implements Blacksmith {
+
+    public Weapon forge(WeaponType weaponType) {
+        return new Weapon(weaponType, 100f, 40f, 30f, 15f);
+    }
+
+}
+```
+
+Realize that each Blacksmith return different weapons.  
+When finishing creating you character, just go to the factory and ask to a blacksmith of your class to build your weapon.
+
+```java
+Blacksmith blacksmith = new Factory().getHumanBlacksmith();
+character.setWeapon(blacksmith.forge(WeaponType.SWORD));
+
+```
+
+After that, get your weapon and follow your adventure!
