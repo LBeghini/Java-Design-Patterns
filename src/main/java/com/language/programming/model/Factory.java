@@ -1,6 +1,6 @@
 package com.language.programming.model;
 
-import com.language.programming.model.enumerations.WeaponType;
+import com.language.programming.model.factory.*;
 
 public class Factory {
 
@@ -18,38 +18,6 @@ public class Factory {
 
     public Blacksmith getOrcBlacksmith() {
         return new OrcBlacksmith();
-    }
-
-}
-
-class DwarfBlacksmith implements Blacksmith {
-
-    public Weapon forge(WeaponType weaponType) {
-        return new Weapon(weaponType, 100f, 20f, 15f, 10f);
-    }
-
-}
-
-class ElfBlacksmith implements Blacksmith {
-
-    public Weapon forge(WeaponType weaponType) {
-        return new Weapon(weaponType, 100f, 30f, 10f, 6f);
-    }
-
-}
-
-class HumanBlacksmith implements Blacksmith {
-
-    public Weapon forge(WeaponType weaponType) {
-        return new Weapon(weaponType, 100f, 20f, 10f, 10f);
-    }
-
-}
-
-class OrcBlacksmith implements Blacksmith {
-
-    public Weapon forge(WeaponType weaponType) {
-        return new Weapon(weaponType, 100f, 40f, 30f, 15f);
     }
 
 }
