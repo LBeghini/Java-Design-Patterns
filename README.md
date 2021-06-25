@@ -6,7 +6,7 @@ State pattern is used when you need to control the state of an object.
 
 For example, if we want to create a keep track of the state of a music, that follows the diagram:
 
-<img src="./resources/StateDiagram.png" width="300px" />
+<img src="./resources/StateDiagram.png" width="800px" />
 
 we would implement a class like below:
 
