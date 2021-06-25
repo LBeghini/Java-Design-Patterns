@@ -13,6 +13,26 @@ public class Music {
         this.state = Play.getInstance();
     }
 
+    public String play() {
+        return state.play(this);
+    }
+
+    public String pause() {
+        return state.pause(this);
+    }
+
+    public String skip() {
+        return state.skip(this);
+    }
+
+    public String stop() {
+        return state.stop(this);
+    }
+
+    public void setState(MusicState state) {
+        this.state = state;
+    }
+
     public String getTitle() {
         return title;
     }

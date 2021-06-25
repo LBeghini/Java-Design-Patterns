@@ -18,26 +18,25 @@ public class Play implements MusicState {
 
     @Override
     public String play(Music music) {
-        // TODO Auto-generated method stub
-        return null;
+        return "⚠️ Operation not allowed";
     }
 
     @Override
     public String pause(Music music) {
-        // TODO Auto-generated method stub
-        return null;
+        music.setState(Pause.getInstance());
+        return "⏸";
     }
 
     @Override
     public String skip(Music music) {
-        // TODO Auto-generated method stub
-        return null;
+        music.setState(Skip.getInstance());
+        return "⏭️";
     }
 
     @Override
     public String stop(Music music) {
-        // TODO Auto-generated method stub
-        return null;
+        music.setState(Stop.getInstance());
+        return "⏹️";
     }
 
 }
