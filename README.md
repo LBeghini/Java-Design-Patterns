@@ -18,7 +18,7 @@ Also, to make it easier to download the source code, [releases](https://github.c
 - [ ] Iterator
 - [ ] Memento
 - [ ] Observer
-- [ ] State
+- [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
 - [ ] Strategy
 - [ ] Template method
 
