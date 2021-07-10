@@ -1,90 +1,42 @@
 # ☕ Java Design Patterns
 
-## About
+## Template Method
 
-This application is a simple Java Console Application that aims to implement design pattern examples to a Programmin Language Class. A set of design patterns will be developed
-each week, and they are divided in different [branches](https://github.com/LBeghini/Java-Design-Patterns/branches).  
+As the name says, it defines a template for an operation. Template Method lets subclasses to redefine certain steps of an method without changing the algorithm's structure.
 
-The main branch is just a template for every other branch.
+For example, let's say we are at a restaurant and we want to call an employee. 
 
-Also, to make it easier to download the source code, [releases](https://github.com/LBeghini/Java-Design-Patterns/releases) are created related to the task of the week, giving a snapshot of the code for that specific implementation.
+If the employee is the Waiter, he would introduce himself as the waiter, and will ask us how he can serve us.
+If the employee is the chef, he would introduce himself as the chef, and will ask if there's something wrong with the food.
 
-## Implemented design patterns
-
-### Behavioural patterns
-
-- [ ] Chain of responsability
-- [ ] Command
-- [ ] Iterator
-- [ ] Memento
-- [ ] Observer
-- [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
-- [ ] Strategy
-- [ ] Template method
-
-### Creational patterns
-
-- [ ] Abstract factory
-- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/tree/1-builder)
-- [x] [Factory method](https://github.com/LBeghini/Java-Design-Patterns/tree/2-factory-method)
-- [x] [Prototype](https://github.com/LBeghini/Java-Design-Patterns/tree/2-prototype)
-- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton)
-
-### Structural patterns
-
-- [ ] Adapter
-- [ ] Bridge
-- [ ] Composite
-- [ ] Decorator
-- [ ] Facade
-- [ ] Flyweight
-- [ ] Mediator
-- [ ] Proxy
-
-## Technologies
-
-- Java
-- JUnit
-- Maven
-
-## Requirements 
-
-To run and edit the project, be sure to have installed in your computer the following softwares:
-- A code editor
-
-After that, you'll need to clone this repo:
-
-```bash
-git clone https://github.com/LBeghini/Java-Design-Patterns.git
+#### Waiter
+```
+Hello, my name is NAME and I am a WAITER. How can I serve you today?
 ```
 
-## Change branch
-
-To change to a different branch, run the command:
-
-```bash
-git checkout name-of-the-branch
+### Chef
+```
+Hello, my name is NAME and I am a COOKER. Is there any problem with your food?
 ```
 
-The branch names have the pattern:
 
-```bash
-{number-of-the-week}-{pattern-name}
+In those lines we can see that only a few changes were made. The method that returns those lines only needs to change the role and the line the employees say at the end.
+
+```java
+
+public abstract class Employee {
+
+    private String name;
+    private Role role;
+
+    public abstract String serve();
+
+    public String introduce() {
+        return "Hello, my name is " + this.name + " and I am a " + this.role.toString() + ". " + this.serve();
+    }
+
+}
+
 ```
 
-> `number-of-the-week` corresponds to the week asked to be implemented certain pattern 
-
-## Testing
-
-This project has no aim to run any of the implemented classes, as the goal is the code itself. However, the classes will be tested to visualize the behaviour and implementation 
-of the patterns.  
-
-You can run the tests using the maven wrapper:
-
-```bash
-./mvnw test 
-```
-
-## :balance_scale: License
-
-[MIT License](https://github.com/LBeghini/Java-Design-Patterns/blob/main/LICENSE)
+As the Waiter and Chef class are created, they will need to implement the serve() method that will return their respective lines. And both of them also have different roles, witch transforms the method introduce() into a template.
