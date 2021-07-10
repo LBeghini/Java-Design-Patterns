@@ -13,14 +13,14 @@ Also, to make it easier to download the source code, [releases](https://github.c
 
 ### Behavioural patterns
 
-- [x] Chain of responsability
+- [x] [Chain of responsibility](https://github.com/LBeghini/Java-Design-Patterns/tree/4-chain-of-responsibility)
 - [ ] Command
-- [x] Iterator
+- [x] [Iterator](https://github.com/LBeghini/Java-Design-Patterns/tree/4-iterator)
 - [ ] Memento
 - [ ] Observer
 - [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
 - [ ] Strategy
-- [x] Template method
+- [x] [Template method](https://github.com/LBeghini/Java-Design-Patterns/tree/4-template-method)
 
 ### Creational patterns
 
