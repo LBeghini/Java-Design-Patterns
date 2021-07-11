@@ -1,90 +1,68 @@
 # ☕ Java Design Patterns
 
-## About
+## Memento
 
-This application is a simple Java Console Application that aims to implement design pattern examples to a Programmin Language Class. A set of design patterns will be developed
-each week, and they are divided in different [branches](https://github.com/LBeghini/Java-Design-Patterns/branches).  
+Memento pattern record the state of an object and externalize it, so it can be restored later.
 
-The main branch is just a template for every other branch.
+For example, let's say we are building an astronomic application where we need to simulate stars behaviour over time. That's the life cycle of a star:
 
-Also, to make it easier to download the source code, [releases](https://github.com/LBeghini/Java-Design-Patterns/releases) are created related to the task of the week, giving a snapshot of the code for that specific implementation.
+<br>
+<br>
+<img src="./resources/StarLifeCycle.png" width="800px" />
 
-## Implemented design patterns
+<br>
+<br>
 
-### Behavioural patterns
+The application requires us to go set the Star states, return to an specifc state and undo changes.
 
-- [x] [Chain of responsibility](https://github.com/LBeghini/Java-Design-Patterns/tree/4-chain-of-responsibility)
-- [ ] Command
-- [x] [Iterator](https://github.com/LBeghini/Java-Design-Patterns/tree/4-iterator)
-- [ ] Memento
-- [ ] Observer
-- [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
-- [ ] Strategy
-- [x] [Template method](https://github.com/LBeghini/Java-Design-Patterns/tree/4-template-method)
+With memento, in our main class Star we add an list of states.
 
-### Creational patterns
+```java
+public class Star {
+    private StarState state;
+    private List<StarState> memento = new ArrayList<>();
 
-- [ ] Abstract factory
-- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/tree/1-builder)
-- [x] [Factory method](https://github.com/LBeghini/Java-Design-Patterns/tree/2-factory-method)
-- [x] [Prototype](https://github.com/LBeghini/Java-Design-Patterns/tree/2-prototype)
-- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton)
-
-### Structural patterns
-
-- [ ] Adapter
-- [ ] Bridge
-- [ ] Composite
-- [ ] Decorator
-- [ ] Facade
-- [ ] Flyweight
-- [ ] Mediator
-- [ ] Proxy
-
-## Technologies
-
-- Java
-- JUnit
-- Maven
-
-## Requirements 
-
-To run and edit the project, be sure to have installed in your computer the following softwares:
-- A code editor
-
-After that, you'll need to clone this repo:
-
-```bash
-git clone https://github.com/LBeghini/Java-Design-Patterns.git
+}
 ```
 
-## Change branch
+When the state changes, we add the change to the memento list.
 
-To change to a different branch, run the command:
-
-```bash
-git checkout name-of-the-branch
+```java
+    public void setState(StarState state) {
+        this.state = state;
+        this.memento.add(this.state);
+    }
 ```
 
-The branch names have the pattern:
+Then, we just need to implement the methods to restore, undo and redo:
 
-```bash
-{number-of-the-week}-{pattern-name}
+```java
+ public void restoreState(int index) {
+        if (this.memento.isEmpty()) {
+            return;
+        }
+
+        if (index < 0 || index > this.memento.size() - 1) {
+            throw new IllegalArgumentException("Invalid index");
+        }
+
+        this.state = this.memento.get(index);
+
+    }
+
+    public void undo() {
+        if (this.memento.isEmpty()) {
+            return;
+        }
+
+        int current = this.memento.indexOf(this.state);
+
+        if (current == 0) {
+            return;
+        }
+
+        this.state = this.memento.get(current - 1);
+
+    }
+
 ```
-
-> `number-of-the-week` corresponds to the week asked to be implemented certain pattern 
-
-## Testing
-
-This project has no aim to run any of the implemented classes, as the goal is the code itself. However, the classes will be tested to visualize the behaviour and implementation 
-of the patterns.  
-
-You can run the tests using the maven wrapper:
-
-```bash
-./mvnw test 
-```
-
-## :balance_scale: License
-
-[MIT License](https://github.com/LBeghini/Java-Design-Patterns/blob/main/LICENSE)
