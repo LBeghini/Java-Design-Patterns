@@ -19,7 +19,7 @@ public class DeviceTest {
 
         weatherApp.change(WeatherType.CLOUDY);
 
-        assertEquals("CLOUDY ☁️", device.getLog().get(0));
+        assertEquals("CLOUDY ☁️", device.getCurrentNotification());
     }
 
     @Test
@@ -36,9 +36,9 @@ public class DeviceTest {
 
         weather.change(WeatherType.RAINY);
 
-        assertAll("Logs", () -> Assertions.assertEquals("RAINY 🌧️", device1.getLog().get(0)),
-                () -> Assertions.assertEquals("RAINY 🌧️", device2.getLog().get(0)),
-                () -> Assertions.assertEquals("RAINY 🌧️", device3.getLog().get(0)));
+        assertAll("Logs", () -> Assertions.assertEquals("RAINY 🌧️", device1.getCurrentNotification()),
+                () -> Assertions.assertEquals("RAINY 🌧️", device2.getCurrentNotification()),
+                () -> Assertions.assertEquals("RAINY 🌧️", device3.getCurrentNotification()));
 
     }
 
@@ -50,7 +50,7 @@ public class DeviceTest {
 
         weather.change(WeatherType.SUNNY);
 
-        assertEquals(0, device.getLog().size());
+        assertNull(device.getCurrentNotification());
 
     }
 
