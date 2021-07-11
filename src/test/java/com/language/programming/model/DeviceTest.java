@@ -42,4 +42,16 @@ public class DeviceTest {
 
     }
 
+    @Test
+    public void shouldNotNotifyDevice() {
+        WeatherApp weather = new WeatherApp();
+
+        Device device = new Device(DeviceType.COMPUTER);
+
+        weather.change(WeatherType.SUNNY);
+
+        assertEquals(0, device.getLog().size());
+
+    }
+
 }
