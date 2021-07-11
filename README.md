@@ -16,8 +16,8 @@ Also, to make it easier to download the source code, [releases](https://github.c
 - [x] [Chain of responsibility](https://github.com/LBeghini/Java-Design-Patterns/tree/4-chain-of-responsibility)
 - [ ] Command
 - [x] [Iterator](https://github.com/LBeghini/Java-Design-Patterns/tree/4-iterator)
-- [ ] [Memento](https://github.com/LBeghini/Java-Design-Patterns/tree/5-memento)
-- [ ] [Observer](https://github.com/LBeghini/Java-Design-Patterns/tree/5-observer)
+- [x] [Memento](https://github.com/LBeghini/Java-Design-Patterns/tree/5-memento)
+- [x] [Observer](https://github.com/LBeghini/Java-Design-Patterns/tree/5-observer)
 - [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
 - [ ] Strategy
 - [x] [Template method](https://github.com/LBeghini/Java-Design-Patterns/tree/4-template-method)
