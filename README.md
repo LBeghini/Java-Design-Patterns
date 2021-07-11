@@ -28,41 +28,41 @@ public class Star {
 When the state changes, we add the change to the memento list.
 
 ```java
-    public void setState(StarState state) {
-        this.state = state;
-        this.memento.add(this.state);
-    }
+public void setState(StarState state) {
+    this.state = state;
+    this.memento.add(this.state);
+}
 ```
 
 Then, we just need to implement the methods to restore, undo and redo:
 
 ```java
- public void restoreState(int index) {
-        if (this.memento.isEmpty()) {
-            return;
-        }
-
-        if (index < 0 || index > this.memento.size() - 1) {
-            throw new IllegalArgumentException("Invalid index");
-        }
-
-        this.state = this.memento.get(index);
-
+public void restoreState(int index) {
+    if (this.memento.isEmpty()) {
+        return;
     }
 
-    public void undo() {
-        if (this.memento.isEmpty()) {
-            return;
-        }
-
-        int current = this.memento.indexOf(this.state);
-
-        if (current == 0) {
-            return;
-        }
-
-        this.state = this.memento.get(current - 1);
-
+    if (index < 0 || index > this.memento.size() - 1) {
+        throw new IllegalArgumentException("Invalid index");
     }
+
+    this.state = this.memento.get(index);
+
+}
+
+public void undo() {
+    if (this.memento.isEmpty()) {
+        return;
+    }
+
+    int current = this.memento.indexOf(this.state);
+
+    if (current == 0) {
+        return;
+    }
+
+    this.state = this.memento.get(current - 1);
+
+}
 
 ```
