@@ -12,3 +12,4 @@ The bridge is between each candy with the flavours.
 
 <img src="./resources/BridgeDiagram.png" width="800px" />
 
+Each flavour adds some quantity of sugar to the recipe. That makes difference in the cake recipe, but not in the ice cream. So in the implementation of the abstract method `getSugar` for the cake, it must subtract the quantity of the sugar that comes from the flavor, and the ice cream just returns the base quantity.
