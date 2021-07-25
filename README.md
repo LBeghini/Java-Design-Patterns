@@ -1,90 +1,14 @@
 # ☕ Java Design Patterns
 
-## About
+## Bridge
 
-This application is a simple Java Console Application that aims to implement design pattern examples to a Programmin Language Class. A set of design patterns will be developed
-each week, and they are divided in different [branches](https://github.com/LBeghini/Java-Design-Patterns/branches).  
+Bridge pattern separate the abstraction from the implementation, allowing them to be developed idependently and let the access to the abstraction part dissociate from the implementation part.
 
-The main branch is just a template for every other branch.
+For example, lets say that we have a factory that makes two types of candy: cakes and ice cream. That's our abstraction.
 
-Also, to make it easier to download the source code, [releases](https://github.com/LBeghini/Java-Design-Patterns/releases) are created related to the task of the week, giving a snapshot of the code for that specific implementation.
+For each candy, there's two flavours: chocolate and strawberry. That's our interface.
 
-## Implemented design patterns
+The bridge is between each candy with the flavours.
 
-### Behavioural patterns
+<img src="./resources/BridgeDiagram.png" width="800px" />
 
-- [x] [Chain of responsibility](https://github.com/LBeghini/Java-Design-Patterns/tree/4-chain-of-responsibility)
-- [x] [Command](https://github.com/LBeghini/Java-Design-Patterns/tree/6-command)
-- [x] [Iterator](https://github.com/LBeghini/Java-Design-Patterns/tree/4-iterator)
-- [x] [Memento](https://github.com/LBeghini/Java-Design-Patterns/tree/5-memento)
-- [x] [Observer](https://github.com/LBeghini/Java-Design-Patterns/tree/5-observer)
-- [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
-- [x] [Strategy](https://github.com/LBeghini/Java-Design-Patterns/tree/6-strategy)
-- [x] [Template method](https://github.com/LBeghini/Java-Design-Patterns/tree/4-template-method)
-
-### Creational patterns
-
-- [ ] Abstract factory
-- [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/tree/1-builder)
-- [x] [Factory method](https://github.com/LBeghini/Java-Design-Patterns/tree/2-factory-method)
-- [x] [Prototype](https://github.com/LBeghini/Java-Design-Patterns/tree/2-prototype)
-- [x] [Singleton](https://github.com/LBeghini/Java-Design-Patterns/tree/1-singleton)
-
-### Structural patterns
-
-- [ ] Adapter
-- [ ] Bridge
-- [ ] Composite
-- [ ] Decorator
-- [ ] Facade
-- [ ] Flyweight
-- [ ] Mediator
-- [ ] Proxy
-
-## Technologies
-
-- Java
-- JUnit
-- Maven
-
-## Requirements 
-
-To run and edit the project, be sure to have installed in your computer the following softwares:
-- A code editor
-
-After that, you'll need to clone this repo:
-
-```bash
-git clone https://github.com/LBeghini/Java-Design-Patterns.git
-```
-
-## Change branch
-
-To change to a different branch, run the command:
-
-```bash
-git checkout name-of-the-branch
-```
-
-The branch names have the pattern:
-
-```bash
-{number-of-the-week}-{pattern-name}
-```
-
-> `number-of-the-week` corresponds to the week asked to be implemented certain pattern 
-
-## Testing
-
-This project has no aim to run any of the implemented classes, as the goal is the code itself. However, the classes will be tested to visualize the behaviour and implementation 
-of the patterns.  
-
-You can run the tests using the maven wrapper:
-
-```bash
-./mvnw test 
-```
-
-## :balance_scale: License
-
-[MIT License](https://github.com/LBeghini/Java-Design-Patterns/blob/main/LICENSE)
