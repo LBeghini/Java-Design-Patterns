@@ -32,8 +32,8 @@ Also, to make it easier to download the source code, [releases](https://github.c
 
 ### Structural patterns
 
-- [ ] Adapter
-- [ ] Bridge
+- [x] [Adapter](https://github.com/LBeghini/Java-Design-Patterns/tree/7-adapter)
+- [x] [Bridge](https://github.com/LBeghini/Java-Design-Patterns/tree/7-bridge)
 - [ ] Composite
 - [ ] Decorator
 - [ ] Facade
