@@ -34,9 +34,9 @@ Also, to make it easier to download the source code, [releases](https://github.c
 
 - [x] [Adapter](https://github.com/LBeghini/Java-Design-Patterns/tree/7-adapter)
 - [x] [Bridge](https://github.com/LBeghini/Java-Design-Patterns/tree/7-bridge)
-- [ ] Composite
+- [x] [Composite](https://github.com/LBeghini/Java-Design-Patterns/tree/8-composite)
 - [ ] Decorator
-- [ ] Facade
+- [x] [Facade](https://github.com/LBeghini/Java-Design-Patterns/tree/8-facade)
 - [ ] Flyweight
 - [ ] Mediator
 - [ ] Proxy
