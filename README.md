@@ -21,7 +21,8 @@ Also, to make it easier to download the source code, [releases](https://github.c
 - [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
 - [x] [Strategy](https://github.com/LBeghini/Java-Design-Patterns/tree/6-strategy)
 - [x] [Template method](https://github.com/LBeghini/Java-Design-Patterns/tree/4-template-method)
-- [ ] [Mediator](https://github.com/LBeghini/Java-Design-Patterns/tree/9-mediator)
+- [x] [Mediator](https://github.com/LBeghini/Java-Design-Patterns/tree/9-mediator)
+- [x] [Interpreter](https://github.com/LBeghini/Java-Design-Patterns/tree/9-interpreter)
 
 ### Creational patterns
 
