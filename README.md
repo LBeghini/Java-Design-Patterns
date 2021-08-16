@@ -39,7 +39,7 @@ Also, to make it easier to download the source code, [releases](https://github.c
 - [x] [Composite](https://github.com/LBeghini/Java-Design-Patterns/tree/8-composite)
 - [ ] Decorator
 - [x] [Facade](https://github.com/LBeghini/Java-Design-Patterns/tree/8-facade)
-- [x] [Flyweight](https://github.com/LBeghini/Java-Design-Patterns/tree/10-facade)
+- [x] [Flyweight](https://github.com/LBeghini/Java-Design-Patterns/tree/10-flyweight)
 - [x] [Proxy](https://github.com/LBeghini/Java-Design-Patterns/tree/10-proxy)
 
 
