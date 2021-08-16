@@ -15,14 +15,14 @@ Also, to make it easier to download the source code, [releases](https://github.c
 
 - [x] [Chain of responsibility](https://github.com/LBeghini/Java-Design-Patterns/tree/4-chain-of-responsibility)
 - [x] [Command](https://github.com/LBeghini/Java-Design-Patterns/tree/6-command)
+- [x] [Interpreter](https://github.com/LBeghini/Java-Design-Patterns/tree/9-interpreter)
 - [x] [Iterator](https://github.com/LBeghini/Java-Design-Patterns/tree/4-iterator)
+- [x] [Mediator](https://github.com/LBeghini/Java-Design-Patterns/tree/9-mediator)
 - [x] [Memento](https://github.com/LBeghini/Java-Design-Patterns/tree/5-memento)
 - [x] [Observer](https://github.com/LBeghini/Java-Design-Patterns/tree/5-observer)
 - [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
 - [x] [Strategy](https://github.com/LBeghini/Java-Design-Patterns/tree/6-strategy)
 - [x] [Template method](https://github.com/LBeghini/Java-Design-Patterns/tree/4-template-method)
-- [x] [Mediator](https://github.com/LBeghini/Java-Design-Patterns/tree/9-mediator)
-- [x] [Interpreter](https://github.com/LBeghini/Java-Design-Patterns/tree/9-interpreter)
 
 ### Creational patterns
 
@@ -39,8 +39,9 @@ Also, to make it easier to download the source code, [releases](https://github.c
 - [x] [Composite](https://github.com/LBeghini/Java-Design-Patterns/tree/8-composite)
 - [ ] Decorator
 - [x] [Facade](https://github.com/LBeghini/Java-Design-Patterns/tree/8-facade)
-- [ ] Flyweight
-- [ ] Proxy
+- [x] [Flyweight](https://github.com/LBeghini/Java-Design-Patterns/tree/10-facade)
+- [x] [Proxy](https://github.com/LBeghini/Java-Design-Patterns/tree/10-proxy)
+
 
 ## Technologies
 
