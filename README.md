@@ -23,6 +23,7 @@ Also, to make it easier to download the source code, [releases](https://github.c
 - [x] [State](https://github.com/LBeghini/Java-Design-Patterns/tree/3-state)
 - [x] [Strategy](https://github.com/LBeghini/Java-Design-Patterns/tree/6-strategy)
 - [x] [Template method](https://github.com/LBeghini/Java-Design-Patterns/tree/4-template-method)
+- [x] [Visitor](https://github.com/LBeghini/Java-Design-Patterns/tree/11-visitor)
 
 ### Creational patterns
 
@@ -37,7 +38,7 @@ Also, to make it easier to download the source code, [releases](https://github.c
 - [x] [Adapter](https://github.com/LBeghini/Java-Design-Patterns/tree/7-adapter)
 - [x] [Bridge](https://github.com/LBeghini/Java-Design-Patterns/tree/7-bridge)
 - [x] [Composite](https://github.com/LBeghini/Java-Design-Patterns/tree/8-composite)
-- [ ] Decorator
+- [x] [Decorator](https://github.com/LBeghini/Java-Design-Patterns/tree/11-decorator)
 - [x] [Facade](https://github.com/LBeghini/Java-Design-Patterns/tree/8-facade)
 - [x] [Flyweight](https://github.com/LBeghini/Java-Design-Patterns/tree/10-flyweight)
 - [x] [Proxy](https://github.com/LBeghini/Java-Design-Patterns/tree/10-proxy)
