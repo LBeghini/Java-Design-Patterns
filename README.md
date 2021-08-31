@@ -27,7 +27,7 @@ Also, to make it easier to download the source code, [releases](https://github.c
 
 ### Creational patterns
 
-- [ ] Abstract factory
+- [x] [Abstract factory](https://github.com/LBeghini/Java-Design-Patterns/tree/12-abstract-factory)
 - [x] [Builder](https://github.com/LBeghini/Java-Design-Patterns/tree/1-builder)
 - [x] [Factory method](https://github.com/LBeghini/Java-Design-Patterns/tree/2-factory-method)
 - [x] [Prototype](https://github.com/LBeghini/Java-Design-Patterns/tree/2-prototype)
